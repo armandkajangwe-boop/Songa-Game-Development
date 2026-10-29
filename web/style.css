@@ -1,0 +1,73 @@
+@font-face{font-family:Songa;src:url("__FONT_BODY__") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:Songa;src:url("__FONT_BOLD__") format("truetype");font-weight:800;font-display:swap}
+:root{color-scheme:light;--ink:#183e33;--cream:#fff7df;--gold:#f5ca62;--muted:#718575}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
+body{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#345747,#0e2821 80%);color:var(--ink);font-family:Songa,sans-serif;user-select:none;-webkit-user-select:none}
+#frame{position:relative;width:540px;height:960px;overflow:hidden;box-shadow:0 0 110px #071c1888;touch-action:none}
+#stage{position:absolute;left:0;top:0;width:540px;height:960px;transform-origin:0 0}
+#world{display:block;width:540px;height:960px;touch-action:none}
+.screen{position:absolute;inset:0;pointer-events:none}
+[hidden]{display:none!important}
+button{font:800 17px Songa,sans-serif;cursor:pointer;border:0;border-radius:16px;color:var(--ink);min-height:44px;padding:12px;pointer-events:auto;touch-action:none;transition:filter .12s,transform .12s}
+button:hover{filter:brightness(1.04)}
+button:active{filter:brightness(.94);transform:translateY(1px)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+button:disabled{cursor:default}
+button.primary{background:var(--gold)}
+button.secondary{background:#e4e7ce}
+.card{background:#fff9e5f2;border-radius:23px}
+.eyebrow{position:absolute;left:34px;top:47px;font-size:12px;font-weight:800;margin:0}
+.sound{position:absolute;top:43px;right:32px;width:123px;min-height:38px;font-size:11px;border-radius:24px}
+.brand{position:absolute;left:34px;top:112px;width:480px}
+.brand h1{font-weight:800;font-size:91px;line-height:1.35;letter-spacing:-4px;margin:0;color:#e5af42;text-shadow:0 6px 0 #654222}
+.brand h2{font-size:17px;line-height:27px;margin:4px 0 0;font-weight:800}
+.brand .accent{display:block;background:var(--gold);width:45px;height:3px;margin:20px 0 17px}
+.brand p{font-size:20px;line-height:31px;margin:0}
+.brand small{display:block;font-size:11px;font-weight:800;margin-top:24px;color:#486b58}
+.home-card{position:absolute;left:20px;top:764px;width:500px;height:175px;text-align:center;padding:18px 20px}
+.home-card h3{font-size:12px;font-weight:800;margin:0}
+.home-card p{font-size:14px;color:#5c7460;margin:10px 0 23px}
+.home-card button{display:block;width:460px;height:62px}
+.home-card button span{margin-left:8px}
+.footer{position:absolute;bottom:2px;margin:0;width:100%;text-align:center;font-size:10px;color:var(--cream)}
+.score-card{position:absolute;top:43px;left:20px;width:500px;height:98px}
+.score-card .distance{position:absolute;left:19px;top:12px}
+.score-card small{display:block;font-size:10px;color:var(--muted);font-weight:800}
+.score-card strong{display:block;font-size:31px;font-weight:800;line-height:44px;margin-top:3px}
+.score-card .bananas{position:absolute;left:215px;top:12px}
+.bananas strong{font-size:27px}
+#hearts{position:absolute;top:35px;left:298px;font-size:23px;letter-spacing:2px;color:#b57743}
+#pause{position:absolute;top:24px;right:21px;width:50px;height:50px;font-size:22px}
+.pause-icon{display:inline-block;width:14px;height:18px;background:linear-gradient(to right,currentColor 0 4px,transparent 4px 10px,currentColor 10px 14px);vertical-align:middle}
+.chase{position:absolute;left:31px;top:160px}
+.chase small{font-size:10px;font-weight:800}
+.meter{position:relative;width:130px;height:5px;background:#183e3321;border-radius:2px;margin-top:13px;overflow:hidden}
+#chase-fill{display:block;height:100%;background:#c38b45;width:18%;transition:width .1s}
+#hint{position:absolute;top:224px;left:15px;width:510px;text-align:center;font-size:16px;font-weight:800;margin:0}
+.controls{position:absolute;left:20px;top:811px;width:500px;height:124px;padding:18px 15px}
+#slide{width:190px;height:65px}
+#jump{width:265px;height:65px;margin-left:10px}
+.controls p{font-size:11px;text-align:center;margin:12px 0 0}
+.modal{background:#0b281ec2;pointer-events:auto}
+.modal .card{text-align:center}
+.modal small{font-size:10px;font-weight:800;color:var(--muted)}
+.modal h2{font-size:32px;font-weight:800;margin:28px 0 20px}
+.modal p{font-size:17px;color:var(--muted)}
+.modal button{display:block;width:100%}
+.pause-card{position:absolute;left:30px;top:290px;width:480px;height:367px;padding:28px 27px}
+.pause-card .primary{margin-top:32px;height:64px}
+.pause-card .secondary{margin-top:18px;height:53px}
+.result-card{position:absolute;left:25px;top:232px;width:490px;height:484px;padding:25px}
+.result-card h2{margin-top:25px}
+.result-card>p{font-size:15px;margin:20px 0 26px}
+.totals{display:flex;justify-content:space-around;padding-top:2px}
+.totals>div{width:50%}
+.totals small{display:block;font-size:11px}
+.totals strong{display:block;font-size:31px;font-weight:800;margin-top:13px}
+#result-best{font-size:12px;margin:22px 0}
+#restart{height:66px}
+#result-home{height:43px;margin-top:17px}
+#loading{display:grid;place-items:center;background:#e1ead3;pointer-events:auto;font-size:20px;font-weight:800}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){button{transition:none}}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#183e33">
+  <meta name="description" content="Play Songa: Rise of the Silverback. A playful Rwandan endless runner in Volcanoes National Park.">
+  <title>Songa — Rise of the Silverback</title>
+  <style>__STYLE__</style>
+</head>
+<body>
+  <main id="frame" aria-label="Songa game">
+    <div id="stage">
+      <canvas id="world" width="1080" height="1920" aria-label="Songa runs through Volcanoes National Park. Use the jump and slide controls below."></canvas>
+      <section id="home" class="screen" aria-label="Main menu">
+        <p class="eyebrow">A RWANDAN ADVENTURE</p>
+        <button id="sound" class="sound secondary" aria-pressed="true" aria-label="Sound on; select to mute">SOUND ON</button>
+        <div class="brand">
+          <h1>SONGA</h1>
+          <h2>RISE OF THE SILVERBACK</h2>
+          <span class="accent"></span>
+          <p>Small gorilla. Big adventure.</p>
+          <small>KINIGI · MUSANZE · RWANDA</small>
+        </div>
+        <div class="home-card card">
+          <h3>VOLCANOES NATIONAL PARK</h3>
+          <p>Tap to jump · Swipe down to slide</p>
+          <button id="start" class="primary">LET’S RUN <span aria-hidden="true">→</span></button>
+        </div>
+        <p id="personal-best" class="footer">PLAYABLE PROTOTYPE</p>
+      </section>
+      <section id="run-hud" class="screen" aria-label="Run status" hidden>
+        <div class="score-card card">
+          <div class="distance"><small>DISTANCE</small><strong id="distance">0 m</strong></div>
+          <div class="bananas"><small>BANANAS</small><strong id="bananas">0</strong></div>
+          <span id="hearts" aria-label="3 hearts remaining">♥ ♥ ♥</span>
+          <button id="pause" class="secondary" aria-label="Pause game"><span class="pause-icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="chase"><small>THE CHASE IS ON</small><div class="meter"><span id="chase-fill"></span></div></div>
+        <p id="hint"></p>
+        <div class="controls card">
+          <button id="slide" class="secondary" aria-label="Hold to slide under branches">↓ &nbsp;SLIDE</button>
+          <button id="jump" class="primary" aria-label="Jump over obstacles">↑ &nbsp;JUMP</button>
+          <p>Tap anywhere to jump · Swipe down to slide</p>
+        </div>
+      </section>
+      <section id="paused" class="screen modal" aria-label="Game paused" hidden>
+        <div class="pause-card card">
+          <small>A MOMENT IN THE MIST</small>
+          <h2>Take a breath.</h2>
+          <p>The forest can wait.</p>
+          <button id="resume" class="primary">KEEP RUNNING →</button>
+          <button id="pause-home" class="secondary">BACK TO CAMP</button>
+        </div>
+      </section>
+      <section id="results" class="screen modal" aria-label="Run results" hidden>
+        <div class="result-card card">
+          <small>CAUGHT UP — TRY AGAIN</small>
+          <h2>A little breather!</h2>
+          <p>Every great adventure takes practice.</p>
+          <div class="totals"><div><small>DISTANCE</small><strong id="result-distance"></strong></div><div><small>BANANAS</small><strong id="result-bananas"></strong></div></div>
+          <p id="result-best"></p>
+          <button id="restart" class="primary">RUN AGAIN →</button>
+          <button id="result-home" class="secondary">BACK TO CAMP</button>
+        </div>
+      </section>
+      <div id="loading" class="screen"><span>Entering the forest…</span></div>
+      <p id="announcer" class="sr-only" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+  <noscript>This game needs JavaScript enabled in your browser.</noscript>
+  <script>window.SONGA_ASSETS = __ASSETS_JSON__;</script>
+  <script>__RUNNER_MODEL__</script>
+  <script>__PLAYER_JS__</script>
+</body>
+</html>
