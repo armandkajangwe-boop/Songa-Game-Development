@@ -1,0 +1,31 @@
+; Songa — Rise of the Silverback. Open with Godot 4.6 or newer.
+config_version=5
+
+[application]
+config/name="Songa: Rise of the Silverback"
+config/description="A playful portrait endless runner in Rwanda's Volcanoes National Park."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://assets/icon.svg"
+
+[display]
+window/size/viewport_width=540
+window/size/viewport_height=960
+window/size/window_width_override=432
+window/size/window_height_override=768
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/handheld/orientation=1
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.08, 0.16, 0.13, 1)
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+pointing/emulate_touch_from_mouse=false
+
+[audio]
+driver/enable_input=false
